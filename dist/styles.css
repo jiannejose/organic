@@ -1,6 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  margin: 0; }
 
 h1 {
   font-size: 54px; }
@@ -16,5 +17,73 @@ h4 {
 
 p {
   font-size: 14px; }
+
+.o-container {
+  width: 100%;
+  max-width: 1100px; }
+
+.c-nav__logo {
+  line-height: 0;
+  margin-left: 20px;
+  position: absolute; }
+
+.c-nav__logo img {
+  width: 100%; }
+
+/*** MAIN NAV ***/
+.c-nav__main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(40deg, #a9c7bd 10%, #3a7090 50%); }
+
+.c-nav__toggle {
+  width: 32px;
+  height: auto;
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px; }
+
+.c-nav__open span {
+  width: 32px;
+  height: 4px;
+  display: block;
+  background-color: #ffffff;
+  margin-top: 3px; }
+
+.c-nav__close {
+  position: absolute;
+  top: 0;
+  display: none; }
+
+.c-nav__close span {
+  color: #ffffff;
+  font-weight: 900; }
+
+.c-nav__menu {
+  margin-top: 50px;
+  letter-spacing: 0.03rem;
+  margin-left: 20px; }
+
+.c-nav__menu ul {
+  list-style: none;
+  padding-left: 0; }
+
+.c-nav__menu a {
+  text-decoration: none;
+  color: #ffffff; }
+
+.c-nav__main-menu {
+  font-size: 20px;
+  font-weight: 600; }
+
+.c-nav__main-menu li {
+  padding: 25px 0; }
+
+.c-nav__sub-menu {
+  display: none; }
+
+.u-clearfix {
+  clear: both; }
 
 /*# sourceMappingURL=maps/styles.css.map */
