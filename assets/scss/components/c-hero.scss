@@ -1,0 +1,48 @@
+.c-hero {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.c-hero__image {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    transform: translateX(-13%);
+    object-fit: cover;   
+  }
+}
+
+.c-hero__items {
+  color: $white-900;
+  max-width: 400px;
+  padding: 0 20px;
+}
+
+.c-hero__title {
+  padding-bottom: 5px;
+
+  h2 { 
+    font-weight: 400;
+  }
+}
+
+@include breakpoint(medium) {
+
+  .c-hero__image img {
+    transform: none;
+  }
+}
+
+
+@include breakpoint(large) {
+
+  .c-hero__title {
+    width: 450px;
+  }
+}

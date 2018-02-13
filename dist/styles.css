@@ -7,7 +7,8 @@ h1 {
   font-size: 54px; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+  line-height: 2.5rem; }
 
 h3 {
   font-size: 26px; }
@@ -16,11 +17,27 @@ h4 {
   font-size: 20px; }
 
 p {
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 1.5rem; }
+
+@media all and (min-width: 1024px) {
+  h2 {
+    font-size: 40px;
+    line-height: 3rem; }
+  p {
+    font-size: 16px;
+    line-height: 1.8rem; } }
 
 .o-container {
-  width: 100%;
   max-width: 1100px; }
+
+@media all and (min-width: 768px) {
+  .o-container {
+    margin: 0 100px; } }
+
+@media all and (min-width: 1440px) {
+  .o-container {
+    margin: 0 200px; } }
 
 .c-nav__logo {
   line-height: 0;
@@ -101,7 +118,55 @@ p {
 .c-nav__sub-menu li {
   padding: 5px 0; }
 
+.c-hero {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  line-height: 0; }
+
+.c-hero__image {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden; }
+
+.c-hero__image img {
+  height: 100%;
+  transform: translateX(-13%);
+  object-fit: cover; }
+
+.c-hero__items {
+  color: #ffffff;
+  max-width: 400px;
+  padding: 0 20px; }
+
+.c-hero__title {
+  padding-bottom: 5px; }
+
+.c-hero__title h2 {
+  font-weight: 400; }
+
+@media all and (min-width: 768px) {
+  .c-hero__image img {
+    transform: none; } }
+
+@media all and (min-width: 1024px) {
+  .c-hero__title {
+    width: 450px; } }
+
 .u-clearfix {
   clear: both; }
+
+.u-pt-40 {
+  padding-top: 40px; }
+
+.u-mt-150 {
+  margin-top: 150px; }
+
+@media all and (min-width: 768px) {
+  .u-mt-200\@t {
+    margin-top: 200px; }
+  .u-ml-100\@t {
+    margin-left: 100px; } }
 
 /*# sourceMappingURL=maps/styles.css.map */
