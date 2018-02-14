@@ -20,14 +20,6 @@ p {
   font-size: 14px;
   line-height: 1.5rem; }
 
-@media all and (min-width: 1024px) {
-  h2 {
-    font-size: 40px;
-    line-height: 3rem; }
-  p {
-    font-size: 16px;
-    line-height: 1.8rem; } }
-
 .o-container {
   max-width: 1100px; }
 
@@ -126,12 +118,12 @@ p {
 
 .c-hero__image {
   width: 100%;
+  height: auto;
   position: absolute;
   z-index: -1;
   overflow: hidden; }
 
 .c-hero__image img {
-  height: 100%;
   transform: translateX(-13%);
   object-fit: cover; }
 
@@ -148,11 +140,18 @@ p {
 
 @media all and (min-width: 768px) {
   .c-hero__image img {
+    width: 150%;
     transform: none; } }
 
 @media all and (min-width: 1024px) {
   .c-hero__title {
-    width: 450px; } }
+    width: 450px; }
+  .c-hero__image img {
+    width: 100%; } }
+
+@media all and (min-width: 2560px) {
+  .c-hero__image img {
+    width: 100%; } }
 
 .u-clearfix {
   clear: both; }
