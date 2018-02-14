@@ -19,3 +19,12 @@ p {
   font-size: 14px;
   line-height: 1.5rem;
 }
+
+@include breakpoint(large) {
+
+  h2 {
+    font-size: 36px;
+    line-height: 3rem;
+  }
+
+}

@@ -10,11 +10,18 @@
 
 }
 
-
-@include breakpoint(1440px) {
+@include breakpoint(large) {
   
   .o-container {
-    margin: 0 200px;
+    margin: 0 150px;
+  }
+
+}
+
+@include breakpoint(1440px) {
+
+  .o-container {
+    margin: 0 250px;
   }
 
 }

@@ -20,7 +20,7 @@
 
 .c-hero__items {
   color: $white-900;
-  max-width: 400px;
+  max-width: 450px;
   padding: 0 20px;
 }
 
@@ -30,6 +30,10 @@
   h2 { 
     font-weight: 400;
   }
+}
+
+.c-hero__site {
+  max-width: 300px;
 }
 
 @include breakpoint(medium) {
@@ -43,12 +47,12 @@
 
 @include breakpoint(large) {
 
-  .c-hero__title {
-    width: 450px;
-  }
-
   .c-hero__image img {
     width: 100%;
+  }
+
+  .c-hero__items {
+    max-width: 400px;
   }
 }
 
