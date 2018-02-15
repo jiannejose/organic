@@ -1,9 +1,14 @@
 
+nav {
+  z-index: 100;
+}
+
 // LOGO
 .c-nav__logo {
   line-height: 0;
-  margin-left: 20px;
   position: absolute;
+  top: 0;
+  left: 20px;
   
   img {
     width: 100%;
@@ -36,10 +41,9 @@
 .c-nav__toggle {
   width: 32px;
   height: auto;
-  position: relative;
-  float: right;
-  margin-right: 20px;
-  margin-top: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .c-nav__open span {
@@ -76,6 +80,7 @@
   letter-spacing: 0.03rem;
   padding: 100px 0 80px;
   margin: 0 20px;
+  display: none;
 
   a {
     text-decoration: none;
@@ -86,6 +91,7 @@
 }
 
 .c-nav__main-menu {
+  width: 100%;
   font-size: $font-medium;
   font-weight: 700;
   list-style: none;
@@ -94,6 +100,10 @@
   & > li {
     padding: 20px 0;
   }
+}
+
+.c-nav__main-menu > li:first-child {
+  padding-left: 0;
 }
 
 .has_sub-menu::after {
@@ -124,6 +134,9 @@
   
   .c-nav__menu {
     padding: 0;
+    display: block;
+    position: absolute;
+    margin-left: 0;
   }
 
   .c-nav__main-menu {
@@ -155,7 +168,4 @@
     padding: 40px;
   }
 
-  .c-nav__main-menu > li:first-child {
-    padding-left: 0;
-  }
 }
