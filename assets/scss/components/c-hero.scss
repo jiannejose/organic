@@ -3,6 +3,8 @@
   height: auto;
   overflow: hidden;
   line-height: 0;
+  position: relative;
+  padding-bottom: 200px;
 }
 
 .c-hero__image {
@@ -13,8 +15,9 @@
   overflow: hidden;
 
   img {
-    transform: translateX(-13%);
-    object-fit: cover;   
+    width: auto;
+    height: 100%;
+    transform: translateX(-13%);  
   }
 }
 
@@ -38,27 +41,25 @@
 
 @include breakpoint(medium) {
 
-  .c-hero__image img {
-    width: 150%;
-    transform: none;
+  .c-hero__image {
+    height: 100%;
+
+      img {
+      width: 100%;
+      transform: none;
+      object-fit: cover;
+    }
+  }
+
+  .c-hero__items {
+    padding-left: 0;
   }
 }
 
 
 @include breakpoint(large) {
 
-  .c-hero__image img {
-    width: 100%;
-  }
-
   .c-hero__items {
     max-width: 400px;
-  }
-}
-
-@include breakpoint(2560px) {
-  
-  .c-hero__image img {
-    width: 100%;
   }
 }
