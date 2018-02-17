@@ -213,11 +213,46 @@ nav {
   .c-hero__items {
     max-width: 400px; } }
 
+.c-section {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.5); }
+
+.c-section__items {
+  margin: 0 20px; }
+
+.c-section__quote {
+  color: #fe992a; }
+
+.c-section__quote-preview p {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.7rem;
+  margin: 0;
+  padding-bottom: 15px; }
+
+.c-section__quote-preview span {
+  font-size: 45px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 0.5em; }
+
+.c-section__quote-preview span:last-child {
+  float: right;
+  padding-right: 100px; }
+
 .u-clearfix {
   clear: both; }
 
 .u-pt-40 {
   padding-top: 40px; }
+
+.u-pt-100 {
+  padding-top: 100px; }
+
+.u-pb-100 {
+  padding-bottom: 100px; }
 
 .u-mt-150 {
   margin-top: 150px; }
