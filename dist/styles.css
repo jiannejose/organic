@@ -27,7 +27,7 @@ p {
     line-height: 3rem; } }
 
 .o-container {
-  max-width: 1100px !important; }
+  max-width: 1100px; }
 
 @media all and (min-width: 768px) {
   .o-container {
@@ -65,7 +65,7 @@ nav {
   background: linear-gradient(40deg, #a9c7bd 35%, #3a7090 85%); }
 
 /** breakpoint **/
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .c-nav__main {
     background: none; } }
 
@@ -93,7 +93,7 @@ nav {
   font-weight: 900; }
 
 /** breakpoint **/
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .c-nav__toggle {
     display: none; } }
 
@@ -142,13 +142,14 @@ nav {
   padding: 5px 0; }
 
 /** breakpoint **/
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .c-nav__menu {
     padding: 0;
     display: block;
     position: absolute;
     margin-left: 0; }
   .c-nav__main-menu {
+    width: auto;
     font-size: 14px;
     display: flex; }
   .c-nav__main-menu > li {
@@ -217,23 +218,30 @@ nav {
 .c-section {
   width: 100%;
   height: auto;
-  background: rgba(255, 255, 255, 0.5);
-  position: relative; }
+  background: rgba(255, 255, 255, 0.4);
+  position: relative;
+  margin-top: -40px; }
 
 .c-section__skew {
   width: 100%;
   height: 97.6%;
   position: absolute;
   bottom: 0;
-  background-color: pink;
+  background-color: #ffffff;
   z-index: -1;
-  transform: skew(0deg, 1.5deg); }
+  transform: skew(0deg, 2.4deg); }
 
 .c-section__items {
   margin: 0 20px; }
 
 /*breakpoint*/
+@media all and (min-width: 768px) {
+  .c-section__skew {
+    transform: skew(0deg, 1.2deg); } }
+
 @media all and (min-width: 1024px) {
+  .c-section__skew {
+    height: 96%; }
   .c-section__items {
     display: flex; } }
 
@@ -281,7 +289,7 @@ button:hover {
   cursor: pointer; }
 
 .border {
-  width: 80%;
+  width: 90%;
   height: 1px;
   background-color: #BABCC4;
   margin: 0 auto; }
@@ -295,7 +303,8 @@ button:hover {
 
 @media all and (min-width: 1024px) {
   .c-section__quote {
-    width: 40%; }
+    width: 40%;
+    margin-left: 0; }
   .border {
     width: 1px;
     height: 300px;
@@ -339,6 +348,10 @@ button:hover {
 
 .u-pb-100 {
   padding-bottom: 100px; }
+
+@media all and (min-width: 768px) {
+  .u-pt-100\@t {
+    padding-top: 100px; } }
 
 .u-mt-150 {
   margin-top: 150px; }

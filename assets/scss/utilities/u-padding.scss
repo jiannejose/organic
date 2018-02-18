@@ -2,3 +2,9 @@
 .u-pt-100 { padding-top: 100px; }
 
 .u-pb-100 { padding-bottom: 100px; }
+
+
+@include breakpoint(medium) {
+
+  .u-pt-100\@t { padding-top: 100px; }
+}
