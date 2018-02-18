@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -48,7 +51,8 @@ nav {
   line-height: 0;
   position: absolute;
   top: 0;
-  left: 20px; }
+  left: 20px;
+  z-index: 10; }
 
 .c-nav__logo img {
   width: 100%; }
@@ -62,7 +66,8 @@ nav {
 .c-nav__main {
   width: 100%;
   height: auto;
-  background: linear-gradient(40deg, #a9c7bd 35%, #3a7090 85%); }
+  background: linear-gradient(40deg, #a9c7bd 35%, #3a7090 85%);
+  position: absolute; }
 
 /** breakpoint **/
 @media all and (min-width: 1024px) {
@@ -158,7 +163,7 @@ nav {
     margin-left: 10px;
     margin-top: 10px; }
   .c-nav__sub-menu {
-    background: linear-gradient(90deg, #3a7090 20%, #a9c7bd 100%);
+    background: linear-gradient(90deg, #3a7090 0%, #a9c7bd 100%);
     padding-left: 15px;
     padding-right: 40px; } }
 
@@ -337,8 +342,59 @@ button:hover {
     padding: 0;
     padding-left: 10px; } }
 
+footer {
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #e56c69; }
+
+.c-footer__contacts {
+  padding: 50px 30px; }
+
+.c-footer__contacts p {
+  font-size: 12px;
+  margin: 0; }
+
+.c-footer__border {
+  width: calc(100% - 60px);
+  height: 2px;
+  background-color: #ffffff;
+  margin: 0 auto; }
+
+.c-footer__sections {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.c-footer__section:nth-child(2n+0) {
+  padding-left: 0; }
+
+.c-footer__section:nth-child(n+3) {
+  padding-top: 0; }
+
+.c-footer__section {
+  padding: 30px;
+  width: 50%; }
+
+.c-footer__section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.c-footer__section li {
+  line-height: 2em;
+  display: block; }
+
+.c-footer__section a {
+  text-decoration: none;
+  color: #ffffff; }
+
 .u-clearfix {
   clear: both; }
+
+.u-pt-30 {
+  padding-top: 30px; }
 
 .u-pt-40 {
   padding-top: 40px; }
@@ -349,9 +405,9 @@ button:hover {
 .u-pb-100 {
   padding-bottom: 100px; }
 
-@media all and (min-width: 768px) {
-  .u-pt-100\@t {
-    padding-top: 100px; } }
+@media all and (min-width: 1024px) {
+  .u-pt-150\@d {
+    padding-top: 150px; } }
 
 .u-mt-150 {
   margin-top: 150px; }
