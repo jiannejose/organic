@@ -19,12 +19,19 @@
   margin: 0 20px;
 }
 
+/*breakpoint*/
+@include breakpoint(large) {
+
+  .c-section__items {
+    display: flex;
+  }
+}
+
 //QUOTE
 
 .c-section__quote {
   color: $orange-900;
   padding: 0 15px;
-  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -88,16 +95,24 @@ button:hover {
 
 @include breakpoint(medium) {
   
+  .c-section__quote {
+    padding: 0;
+  }
+
   .border {
     width: 95%;
   }
 }
 
 @include breakpoint(large) {
+  .c-section__quote {
+    width: 40%;
+  }
 
   .border {
     width: 1px;
     height: 300px;
+    margin-left: 0;
   }
 }
 
@@ -110,6 +125,7 @@ button:hover {
   color: $orange-900;
   font-size: $font-medium;
   font-weight: 300;
+  line-height: 1.2em;
 }
 
 .c-section__details p {
@@ -119,7 +135,24 @@ button:hover {
 /*breakpoint*/
 @include breakpoint(medium) {
 
+  .c-section__about {
+    padding: 30px 0;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
   .c-section__title p {
     font-size: $font-large;
+  }
+}
+
+@include breakpoint(large) {
+
+  .c-section__about {
+    width: 50%;
+    padding: 0;
+    padding-left: 10px;
   }
 }

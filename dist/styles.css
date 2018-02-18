@@ -232,10 +232,14 @@ nav {
 .c-section__items {
   margin: 0 20px; }
 
+/*breakpoint*/
+@media all and (min-width: 1024px) {
+  .c-section__items {
+    display: flex; } }
+
 .c-section__quote {
   color: #fe992a;
   padding: 0 15px;
-  max-width: 300px;
   margin: 0 auto; }
 
 .c-section__quote-preview p {
@@ -284,13 +288,18 @@ button:hover {
 
 /*breakpoint*/
 @media all and (min-width: 768px) {
+  .c-section__quote {
+    padding: 0; }
   .border {
     width: 95%; } }
 
 @media all and (min-width: 1024px) {
+  .c-section__quote {
+    width: 40%; }
   .border {
     width: 1px;
-    height: 300px; } }
+    height: 300px;
+    margin-left: 0; } }
 
 .c-section__about {
   padding: 30px 15px; }
@@ -298,15 +307,26 @@ button:hover {
 .c-section__title p {
   color: #fe992a;
   font-size: 20px;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.2em; }
 
 .c-section__details p {
   opacity: 0.4; }
 
 /*breakpoint*/
 @media all and (min-width: 768px) {
+  .c-section__about {
+    padding: 30px 0; }
+  .c-section__about p {
+    margin-top: 0; }
   .c-section__title p {
     font-size: 26px; } }
+
+@media all and (min-width: 1024px) {
+  .c-section__about {
+    width: 50%;
+    padding: 0;
+    padding-left: 10px; } }
 
 .u-clearfix {
   clear: both; }
