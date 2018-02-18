@@ -8,8 +8,13 @@
   margin: 0 20px;
 }
 
+//QUOTE
+
 .c-section__quote {
   color: $orange-900;
+  padding: 0 15px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .c-section__quote-preview {
@@ -29,10 +34,81 @@
     font-style: italic;
     line-height: 0.5em;
   }
-
 }
 
 .c-section__quote-preview span:last-child {
   float: right;
   padding-right: 100px;
+}
+
+.c-section__quote-buttons {
+  text-align: right;
+  padding: 50px 0; 
+
+  & > :nth-child(2) {
+    margin-left: -4px;
+    background-color: $orange-500;
+  }
+}
+
+button {
+  border: none;
+  background-color: $orange-900;
+
+  i {
+    padding: 8px;
+    color: $white-900;
+    font-weight: 900;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.border {
+  width: 80%;
+  height: 1px;
+  background-color: #BABCC4;
+  margin: 0 auto;
+}
+
+/*breakpoint*/
+
+@include breakpoint(medium) {
+  
+  .border {
+    width: 95%;
+  }
+}
+
+@include breakpoint(large) {
+
+  .border {
+    width: 1px;
+    height: 300px;
+  }
+}
+
+//ABOUT
+.c-section__about {
+  padding: 30px 15px;
+}
+
+.c-section__title p {
+  color: $orange-900;
+  font-size: $font-medium;
+  font-weight: 300;
+}
+
+.c-section__details p {
+  opacity: 0.4;
+}
+
+/*breakpoint*/
+@include breakpoint(medium) {
+
+  .c-section__title p {
+    font-size: $font-large;
+  }
 }
