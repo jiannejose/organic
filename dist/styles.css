@@ -217,7 +217,17 @@ nav {
 .c-section {
   width: 100%;
   height: auto;
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.5);
+  position: relative; }
+
+.c-section__skew {
+  width: 100%;
+  height: 97.6%;
+  position: absolute;
+  bottom: 0;
+  background-color: pink;
+  z-index: -1;
+  transform: skew(0deg, 1.5deg); }
 
 .c-section__items {
   margin: 0 20px; }
