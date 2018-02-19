@@ -8,6 +8,10 @@
     margin: 0 100px !important;
   }
 
+  .o-padded_container {
+    padding: 0 100px;
+  }
+
 }
 
 @include breakpoint(large) {
@@ -16,12 +20,20 @@
     margin: 0 150px !important;
   }
 
+  .o-padded_container {
+    padding: 0 150px;
+  }
+
 }
 
 @include breakpoint(1440px) {
 
   .o-container {
     margin: 0 250px !important;
+  }
+
+  .o-padded_container {
+    padding: 0 250px;
   }
 
 }
