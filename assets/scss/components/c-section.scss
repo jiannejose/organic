@@ -16,10 +16,6 @@
   transform: skew(0deg, 2.4deg);
 }
 
-.c-section__items {
-  margin: 0 20px;
-}
-
 /*breakpoint*/
 @include breakpoint(medium) {
   .c-section__skew {

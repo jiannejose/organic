@@ -80,8 +80,7 @@ nav {
 
 .c-nav__menu {
   letter-spacing: 0.03rem;
-  padding: 100px 0 80px;
-  margin: 0 20px;
+  padding: 100px 20px 80px;
   display: none;
 
   a {
@@ -89,7 +88,6 @@ nav {
     color: $white-900;
     display: block;
   }
-  
 }
 
 .c-nav__main-menu {
@@ -131,14 +129,19 @@ nav {
   }
 }
 
+.c-nav__sub-menu--open .c-nav__menu {
+  padding-bottom: 0;
+}
+
 /** breakpoint **/
 @include breakpoint(large) {
   
   .c-nav__menu {
     padding: 0;
+    padding-left: 80px;
     display: block;
-    position: absolute;
-    margin-left: 0;
+    position: relative;
+    margin: 0 auto;
   }
 
   .c-nav__main-menu {
@@ -149,7 +152,6 @@ nav {
     & > li {
       padding: 30px 20px;
     }
-
   }
 
   .has_sub-menu::after {
@@ -162,10 +164,13 @@ nav {
     padding-left: 15px;
     padding-right: 40px;
   }
-
 }
 
 @include breakpoint(1440px) {
+
+  .c-nav__menu {
+    padding-left: 0;
+  }
 
   .c-nav__main-menu > li {
     padding: 40px;

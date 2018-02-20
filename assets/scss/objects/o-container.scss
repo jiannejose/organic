@@ -1,39 +1,20 @@
 .o-container {
-  max-width: 1100px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 @include breakpoint(medium) {
-  
+
   .o-container {
-    margin: 0 100px !important;
+    max-width: 600px;
+    padding: 0;
   }
-
-  .o-padded_container {
-    padding: 0 100px;
-  }
-
 }
 
 @include breakpoint(large) {
-  
-  .o-container {
-    margin: 0 150px !important;
-  }
-
-  .o-padded_container {
-    padding: 0 150px;
-  }
-
-}
-
-@include breakpoint(1440px) {
 
   .o-container {
-    margin: 0 250px !important;
+    max-width: 900px;
   }
-
-  .o-padded_container {
-    padding: 0 250px;
-  }
-
 }

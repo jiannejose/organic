@@ -24,8 +24,6 @@
 
 .c-hero__items {
   color: $white-900;
-  max-width: 450px;
-  padding: 0 20px;
 }
 
 .c-hero__title {
@@ -53,7 +51,7 @@
   }
 
   .c-hero__items {
-    padding-left: 0;
+    width: 450px;
   }
 }
 

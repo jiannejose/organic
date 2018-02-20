@@ -7,7 +7,7 @@ footer {
 }
 
 .c-footer__contacts {
-  padding: 50px 30px;
+  padding: 50px 0;
 
   p {
     font-size: $font-small;
@@ -16,7 +16,7 @@ footer {
 }
 
 .c-footer__border {
-  width: calc(100% - 60px);
+  width: 100%;
   height: 2px;
   background-color: $white-900;
   margin: 0 auto;
@@ -28,8 +28,12 @@ footer {
   flex-wrap: wrap;
 }
 
-.c-footer__section:nth-child(2n+0) {
+.c-footer__section:nth-child(odd) {
   padding-left: 0;
+}
+
+.c-footer__section:nth-child(even) {
+  padding-right: 0;
 }
 
 .c-footer__section:nth-child(n+3) {
@@ -54,15 +58,16 @@ footer {
   a {
     text-decoration: none;
     color: $white-900;
+    transition: all 500ms ease-in;
   }
+}
+
+.c-footer__section a:hover {
+  text-decoration: underline;
 }
 
 /* breakpoint */
 @include breakpoint(medium) {
-
-  .c-footer__contacts {
-    padding: 50px 0;
-  }
 
   .c-footer__sections {
     width: auto;
@@ -70,14 +75,15 @@ footer {
 
   .c-footer__section {
     width: 33%;
-  }
-
-  .c-footer__section:nth-child(2n+0) {
-    padding-left: 30px;
+    padding-left: 0;
   }
 
   .c-footer__section:nth-child(n+3) {
     padding-top: 30px;
+  }
+
+  .c-footer__section:nth-child(even) {
+    padding-right: 30px;
   }
 
   .c-footer__border {
@@ -87,7 +93,7 @@ footer {
 
 @include breakpoint(large) {
   
-  footer {
+  .c-footer {
     display: flex;
   }
 
@@ -96,7 +102,7 @@ footer {
   }
 
   .c-footer__contacts {
-    width: 25%;
+    width: 35%;
   }
 
   .c-footer__sections {
@@ -105,5 +111,9 @@ footer {
 
   .c-footer__section {
     width: 20%;
+  }
+
+  .c-footer__section:last-child {
+    padding-right: 0;
   }
 }
