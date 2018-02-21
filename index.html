@@ -19,17 +19,17 @@
                     <img src="dist/img/logo.png" alt="Logo" />
                 </div> <!-- /c-nav__logo -->
 
-                <div class="c-nav__main">
+                <div class="c-nav__main" id="navBg">
 
                     <div class="c-nav__toggle">
 
-                        <div class="c-nav__open">
+                        <div class="c-nav__burger" id="openNav">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
 
-                        <div class="c-nav__close">
+                        <div class="c-nav__close c-nav__close--inactive" id="closeNav">
                             <span>close</span>
                         </div>       
                         
@@ -37,7 +37,7 @@
 
                     <div class="u-clearfix"></div>
 
-                    <div class="c-nav__menu o-container">
+                    <div class="c-nav__menu c-nav__menu--close o-container" id="toggleNav">
                         <ul class="c-nav__main-menu">
                             <li>
                                 <a href="#" class="has_sub-menu">Commercial</a>
@@ -270,5 +270,7 @@
             <!-- footer end -->
 
         </main>
+
+        <script src="assets/main.js"></script>
     </body>
 </html>

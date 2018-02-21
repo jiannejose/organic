@@ -65,8 +65,12 @@ nav {
 .c-nav__main {
   width: 100%;
   height: auto;
-  background: linear-gradient(40deg, #a9c7bd 35%, #3a7090 85%);
-  position: absolute; }
+  background: transparent;
+  position: absolute;
+  transition: all 1000ms ease-in-out; }
+
+.c-nav__main--open {
+  background: linear-gradient(40deg, #a9c7bd 35%, #3a7090 85%); }
 
 /** breakpoint **/
 @media all and (min-width: 1024px) {
@@ -80,21 +84,35 @@ nav {
   top: 20px;
   right: 20px; }
 
-.c-nav__open span {
+.c-nav__burger {
+  opacity: 1; }
+
+.c-nav__burger span {
   width: 32px;
   height: 4px;
   display: block;
   background-color: #ffffff;
-  margin-top: 3px; }
+  margin-top: 3px;
+  transition: all 300ms ease-in-out; }
+
+.c-nav__burger--inactive {
+  opacity: 0; }
 
 .c-nav__close {
   position: absolute;
   top: 0;
-  display: none; }
+  opacity: 0;
+  transition: all 300ms ease-in-out; }
 
 .c-nav__close span {
   color: #ffffff;
   font-weight: 900; }
+
+.c-nav__close--inactive {
+  display: none; }
+
+.c-nav__close--active {
+  opacity: 1; }
 
 /** breakpoint **/
 @media all and (min-width: 1024px) {
@@ -104,12 +122,19 @@ nav {
 .c-nav__menu {
   letter-spacing: 0.03rem;
   padding: 100px 20px 80px;
-  display: none; }
+  opacity: 0;
+  transition: opacity 300ms ease-in-out; }
 
 .c-nav__menu a {
   text-decoration: none;
   color: #ffffff;
   display: block; }
+
+.c-nav__menu--open {
+  opacity: 1; }
+
+.c-nav__menu--close {
+  display: none; }
 
 .c-nav__main-menu {
   width: 100%;

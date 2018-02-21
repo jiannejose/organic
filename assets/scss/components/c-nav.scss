@@ -27,8 +27,13 @@ nav {
 .c-nav__main {
   width: 100%;
   height: auto;
-  background: linear-gradient(40deg, $blue-500 35%, $blue-900 85%);
+  background: transparent;
   position: absolute;
+  transition: all 1000ms ease-in-out;
+}
+
+.c-nav__main--open {
+  background: linear-gradient(40deg, $blue-500 35%, $blue-900 85%);
 }
 
 /** breakpoint **/
@@ -48,23 +53,41 @@ nav {
   right: 20px;
 }
 
-.c-nav__open span {
-  width: 32px;
-  height: 4px;
-  display: block;
-  background-color: $white-900;
-  margin-top: 3px;
+.c-nav__burger {
+  opacity: 1;
+
+  span {
+    width: 32px;
+    height: 4px;
+    display: block;
+    background-color: $white-900;
+    margin-top: 3px;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+.c-nav__burger--inactive {
+  opacity: 0;
 }
 
 .c-nav__close {
   position: absolute;
   top: 0;
-  display: none;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
 
   span {
     color: $white-900;
     font-weight: 900;
   }
+}
+
+.c-nav__close--inactive {
+  display: none;
+}
+
+.c-nav__close--active {
+  opacity: 1;
 }
 
 /** breakpoint **/
@@ -81,13 +104,22 @@ nav {
 .c-nav__menu {
   letter-spacing: 0.03rem;
   padding: 100px 20px 80px;
-  display: none;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
 
   a {
     text-decoration: none;
     color: $white-900;
     display: block;
   }
+}
+
+.c-nav__menu--open {
+  opacity: 1;
+}
+
+.c-nav__menu--close {
+  display: none;
 }
 
 .c-nav__main-menu {
