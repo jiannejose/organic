@@ -169,8 +169,8 @@ nav {
 .c-nav__sub-menu li {
   padding: 5px 0; }
 
-.c-nav__sub-menu--open .c-nav__menu {
-  padding-bottom: 0; }
+.c-nav__sub-menu--open {
+  display: block; }
 
 /** breakpoint **/
 @media all and (min-width: 1024px) {

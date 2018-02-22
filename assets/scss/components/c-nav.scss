@@ -161,8 +161,8 @@ nav {
   }
 }
 
-.c-nav__sub-menu--open .c-nav__menu {
-  padding-bottom: 0;
+.c-nav__sub-menu--open {
+  display: block;
 }
 
 /** breakpoint **/

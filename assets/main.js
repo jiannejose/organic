@@ -47,3 +47,19 @@ function navClose() {
 }
 
 closeNav.addEventListener('click', navClose);
+
+
+// OPEN SUB MENU
+const subMenus = document.getElementsByClassName('has_sub-menu');
+
+for (let i = 0; i < subMenus.length; i++) {
+  subMenus[i].addEventListener('click', openSubMenu);
+}
+
+function openSubMenu() {
+  let parentElement = this.parentElement;
+  let subMenu = parentElement.querySelector('.c-nav__sub-menu');
+  
+  subMenu.classList.add('c-nav__sub-menu--open');
+}
+
