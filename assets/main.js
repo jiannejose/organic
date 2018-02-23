@@ -58,8 +58,12 @@ for (let i = 0; i < subMenus.length; i++) {
 
 function openSubMenu() {
   let parentElement = this.parentElement;
-  let subMenu = parentElement.querySelector('.c-nav__sub-menu');
-  
-  subMenu.classList.add('c-nav__sub-menu--open');
+
+  for (let i = 0; i < subMenus.length; i++) { 
+    let subMenuParent = subMenus[i].parentElement;
+    subMenuParent.classList.remove('sub-menu--open');
+  }
+
+  parentElement.classList.add('sub-menu--open');
 }
 
