@@ -49,21 +49,35 @@ function navClose() {
 closeNav.addEventListener('click', navClose);
 
 
-// OPEN SUB MENU
+// TOGGLE SUB MENU
 const subMenus = document.getElementsByClassName('has_sub-menu');
 
 for (let i = 0; i < subMenus.length; i++) {
   subMenus[i].addEventListener('click', openSubMenu);
 }
 
-function openSubMenu() {
+function openSubMenu(event) {
+  event.preventDefault();
   let parentElement = this.parentElement;
 
-  for (let i = 0; i < subMenus.length; i++) { 
-    let subMenuParent = subMenus[i].parentElement;
-    subMenuParent.classList.remove('sub-menu--open');
+  if (hasSubMenuOpenClass(parentElement)) {
+    parentElement.classList.remove('sub-menu--open');
+    return;
   }
+
+  closeAllSubMenus(); 
 
   parentElement.classList.add('sub-menu--open');
 }
 
+function hasSubMenuOpenClass(element) {
+  let answer = element.classList.contains('sub-menu--open');
+  return answer;
+}
+
+function closeAllSubMenus() {
+  for (let i = 0; i < subMenus.length; i++) { 
+    let subMenuParent = subMenus[i].parentElement;
+    subMenuParent.classList.remove('sub-menu--open');
+  }
+}
