@@ -106,12 +106,6 @@ nav {
   padding: 100px 20px 80px;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
-
-  a {
-    text-decoration: none;
-    color: $white-900;
-    display: block;
-  }
 }
 
 .c-nav__menu--open {
@@ -132,10 +126,23 @@ nav {
   & > li {
     padding: 20px 0;
   }
+
+  a {
+    text-decoration: none;
+    color: $white-900;
+    display: block;
+    transition: all 300ms ease-out;
+  }
 }
 
 .c-nav__main-menu > li:first-child {
   padding-left: 0;
+}
+
+.c-nav__main-menu {
+  a:hover {
+    color: $blue-900;
+  }
 }
 
 .has_sub-menu::after {
@@ -147,6 +154,10 @@ nav {
   border-left: 3px solid transparent;
   border-bottom: 3px solid transparent;
   margin-top: 12px;
+}
+
+.has_sub-menu:hover::after {
+  border-top: 3px solid $blue-900;
 }
 
 .c-nav__sub-menu {
@@ -161,6 +172,10 @@ nav {
   }
 }
 
+.c-nav__sub-menu a:hover {
+  color: $blue-900;
+}
+
 .sub-menu--open .c-nav__sub-menu {
   display: block;
 }
@@ -171,14 +186,16 @@ nav {
 }
 
 /** breakpoint **/
+
 @include breakpoint(large) {
   
   .c-nav__menu {
-    padding: 0;
-    padding-left: 80px;
     display: block;
     position: relative;
+    padding: 0;
+    padding-left: 80px;
     margin: 0 auto;
+    opacity: 1;
   }
 
   .c-nav__main-menu {
@@ -193,13 +210,22 @@ nav {
 
   .has_sub-menu::after {
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 9px;
   }
 
   .c-nav__sub-menu {
-    background: linear-gradient(90deg, $blue-900 0%, $blue-500 100%);
     padding-left: 15px;
     padding-right: 40px;
+  }
+
+  .sub-menu--open .c-nav__sub-menu {
+    position: absolute;
+  }
+}
+
+@include breakpoint(1200px) {
+  .c-nav__menu {
+    padding-left: 0;
   }
 }
 
