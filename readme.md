@@ -2,6 +2,9 @@
 
 A simple but elegant web page that I created from the design I found. Refer to source. 
 
+And here's my output:
+https://jiannejose.github.io/organic/
+
 ## Methodologies and Technologies I Used
 
 I used SASS (Syntactically Awesome Style Sheets) as my CSS Preprocessor and ITCSS (Inverted Triangle CSS) as my code architecture.
