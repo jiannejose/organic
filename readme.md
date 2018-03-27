@@ -1,6 +1,6 @@
 # Organic 
 
-A simple but elegant web page that I created from the design I found. Refer to source. 
+A simple but elegant responsive web page that I created from the design I found. Refer to source. 
 
 And here's my output:
 https://jiannejose.github.io/organic/
